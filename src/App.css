@@ -28,8 +28,12 @@
     align-self: flex-end;
     padding: 30px;
 }
+.landing-page > h3 {
+    margin-left: 10vh;
+    justify-self: flex-start;
+}
 
-.stack-page {
+.page {
     height: 100vh;
     scroll-snap-align: start;
     padding: 5vh;
@@ -46,7 +50,7 @@
     padding: 10vh;
     height: 40vh;
 
-    overflow-y: scroll;
+    overflow: unset;
 }
 
 .stack-item-card > * > h1 {
@@ -86,7 +90,7 @@
     width: 50px;
 }
 .stack-item-thumbnail:hover {
-    filter: drop-shadow(0 0 10px rgb(166, 184, 210));
+    filter: drop-shadow(0 0 15px rgb(95, 119, 151));
 }
 
 .stack-item-image {
