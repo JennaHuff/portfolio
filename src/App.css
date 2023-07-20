@@ -5,6 +5,41 @@
     scroll-snap-type: y mandatory;
 }
 
+.resume-grid {
+    margin: 10vh;
+    background: linear-gradient(#ffda55, #ffda55) no-repeat left/20px 100%;
+}
+
+.resume-grid > div {
+    text-align: justify;
+    margin-bottom: 10vh;
+}
+
+@media screen and (min-width: 700px) {
+    .resume-grid {
+        background: linear-gradient(#ffda55, #ffda55) no-repeat center/20px 100%;
+    }
+    .resume-grid > div:nth-child(odd) {
+        margin-right: 50%;
+    }
+    .resume-grid > div:nth-child(odd) > h4 {
+        text-align: right;
+    }
+    .resume-grid > div:nth-child(even) {
+        margin-left: 50%;
+    }
+}
+
+.page {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 5vh;
+}
+
+.page > h1 {
+    letter-spacing: -1.7px;
+}
+
 .landing-page {
     height: 100vh;
     scroll-snap-align: start;
@@ -15,7 +50,6 @@
     grid-template-rows: 1fr 1fr 1fr;
 
     flex-wrap: nowrap;
-    /* justify-content: space-around; */
     align-items: center;
     justify-items: center;
 }
@@ -33,10 +67,14 @@
     justify-self: flex-start;
 }
 
-.page {
-    height: 100vh;
-    scroll-snap-align: start;
-    padding: 5vh;
+.about-me {
+    overflow-y: scroll;
+}
+
+#about-me-paragraph {
+    font-size: max(16px, 2vw);
+    text-align: justify;
+    margin: 10vh 20vh;
 }
 
 .stack-item-card {
