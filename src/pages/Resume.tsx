@@ -1,6 +1,6 @@
 export function Resume() {
     return (
-        <div className="page">
+        <div className="page resume">
             <h1>Resume</h1>
             <div className={"resume-grid"}>
                 <div>

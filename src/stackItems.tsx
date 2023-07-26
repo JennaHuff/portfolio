@@ -8,38 +8,38 @@ import { ReactComponent as CssLogo } from "./assets/CSS Logo.svg";
 const stackItems: IStackItem[] = [
     {
         name: "React",
-        Icon: (className: string) => <ReactLogo className={className} />,
+        icon: <ReactLogo />,
         description:
             "A powerful modern UI library Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         docsLink: "https://react.dev/",
     },
     {
         name: "Typescript",
-        Icon: (className: string) => <TypescriptLogo className={className} />,
+        icon: <TypescriptLogo />,
         description: "Adds types to javascript",
         docsLink: "https://www.typescriptlang.org/",
     },
     {
         name: "ViteJS",
-        Icon: (className: string) => <ViteLogo className={className} />,
+        icon: <ViteLogo />,
         description: "Fast react app bundler",
         docsLink: "https://vitejs.dev/",
     },
     {
         name: "Visual Studio Code",
-        Icon: (className: string) => <VscLogo className={className} />,
+        icon: <VscLogo />,
         description: "An ide ++ plugins",
         docsLink: "https://code.visualstudio.com/",
     },
     {
         name: "Git",
-        Icon: (className: string) => <GitLogo className={className} />,
+        icon: <GitLogo />,
         description: "Version control software",
         docsLink: "https://git-scm.com/",
     },
     {
         name: "CSS 3",
-        Icon: (className: string) => <CssLogo className={className} />,
+        icon: <CssLogo />,
         description: "Good old, cascading, reliable style sheets",
         docsLink: "https://www.w3.org/Style/CSS/learning",
     },

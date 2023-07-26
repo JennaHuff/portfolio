@@ -5,7 +5,6 @@ import LandingPage from "./pages/LandingPage";
 import { AboutMe } from "./pages/AboutMe";
 import { Resume } from "./pages/Resume";
 import { StackPage } from "./pages/StackPage";
-import { ProgressBar } from "./Components/ProgressBar";
 
 function App() {
     return (
@@ -14,7 +13,6 @@ function App() {
             <StackPage />
             <AboutMe />
             <Resume />
-            <ProgressBar />
         </>
     );
 }

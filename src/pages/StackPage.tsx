@@ -1,15 +1,13 @@
 import { useState } from "react";
-import stackItems from "../constants";
+import stackItems from "../stackItems";
 
 function StackItemCard(item: IStackItem) {
     return (
         <div className="stack-item-card">
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
-                <>{item.Icon("stack-item-image")}</>
-                <h1>{item.name}</h1>
-            </div>
+            <>{item.icon}</>
+            <h1>{item.name}</h1>
             <p>{item.description}</p>
-            <a href={item.docsLink} target="_blank">
+            <a href={item.docsLink} target="_blank" id="learn-more">
                 Learn more
             </a>
         </div>
@@ -21,7 +19,7 @@ export function StackPage() {
         StackItemCard(stackItems[0])
     );
     return (
-        <div className="page">
+        <div className="page stack-page">
             <h1>My current stack</h1>
             <div className="icons-bar">
                 {stackItems.map((item, key) => (
@@ -29,8 +27,10 @@ export function StackPage() {
                         onMouseEnter={() => setCurrentItem(StackItemCard(item))}
                         onClick={() => setCurrentItem(StackItemCard(item))}
                         key={key}
+                        aria-label={item.name}
+                        tabIndex={0}
                     >
-                        <>{item.Icon("stack-item-thumbnail")}</>
+                        <>{item.icon}</>
                     </div>
                 ))}
             </div>

@@ -1,7 +1,6 @@
 interface IStackItem {
     name: string;
-    Icon: Function;
-    // icon: React.SVGProps<SVGSVGElement>;
+    icon: React<React.SVGProps<SVGSVGElement>>;
     description: string;
     docsLink: string;
 }
