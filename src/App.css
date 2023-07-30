@@ -26,7 +26,7 @@ button {
 }
 
 .page {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     padding-top: 5vh;
     margin: 0 10vw;
 
