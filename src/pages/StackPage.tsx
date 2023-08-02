@@ -18,15 +18,28 @@ export function StackPage() {
     const [currentItem, setCurrentItem] = useState(
         StackItemCard(stackItems[0])
     );
+    const [isFistFocus, setIsFirstFocus] = useState(0);
     return (
         <div className="page stack-page">
-            <h1>My current stack</h1>
+            <h1>Tech stack</h1>
             <div className="icons-bar">
                 {stackItems.map((item, key) => (
                     <div
-                        onMouseEnter={() => setCurrentItem(StackItemCard(item))}
-                        onClick={() => setCurrentItem(StackItemCard(item))}
+                        onMouseEnter={() => {
+                            setCurrentItem(StackItemCard(item)),
+                                focus(),
+                                setIsFirstFocus(key);
+                        }}
+                        onClick={() => {
+                            setCurrentItem(StackItemCard(item)),
+                                setIsFirstFocus(key);
+                        }}
+                        onFocusCapture={() => {
+                            setCurrentItem(StackItemCard(item)),
+                                setIsFirstFocus(key);
+                        }}
                         key={key}
+                        id={isFistFocus === key ? "focused-item" : ""}
                         aria-label={item.name}
                         tabIndex={0}
                     >

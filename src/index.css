@@ -44,7 +44,8 @@ h2 {
     font-size: clamp(22px, 2.5rem, 5vw);
 }
 
-h3 {
+h3,
+p {
     font-size: clamp(16px, 1.5rem, 5vw);
 }
 

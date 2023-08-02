@@ -3,10 +3,9 @@ export default function LandingPage() {
         <div className="page landing-page">
             <div className="landing-page-grid">
                 <h1>
-                    Anton J <br />
-                    portfolio
+                    Anton Joddah <br />
                 </h1>
-                <h2>Front end web developper</h2>
+                <h2>Front End Portfolio</h2>
                 <button aria-label="contact">✉️</button>
                 <h3>📍 Bordeaux, France</h3>
             </div>
