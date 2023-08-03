@@ -66,8 +66,9 @@ button {
 
     #landing-page-buttons {
         height: fit-content;
-        display: flex;
         width: 100%;
+
+        display: flex;
         gap: 2vw;
         grid-column: 2 / 3;
         > button {
