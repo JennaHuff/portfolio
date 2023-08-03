@@ -1,36 +1,17 @@
 #root {
-    /* scroll-snap-type: y proximity; */
-    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
+
     width: 100vw;
     height: 100dvh;
     overflow-y: scroll;
+
     background-image: url("/src/assets/Background Waves.svg");
     background-size: cover;
     background-attachment: local;
     color: white;
 
-    /*
-    background-image: url("/src/assets/Dark Background Waves.svg")
-     > h1,
-    h2,
-    h3,
-    h4,
-    p,
-    div > h1 {
-        mix-blend-mode: difference;
-    } */
-}
-
-#second-root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: sticky;
-    overflow-y: scroll;
-    background-image: url("/src/assets/Orange Background Waves.svg");
-    background-size: cover;
-    background-attachment: local;
+    /* --card-bg-color: rgb(53, 42, 84, 0.5); */
+    --card-bg-color: rgba(53, 42, 84, 0.258);
 }
 
 button {
@@ -38,7 +19,8 @@ button {
 }
 
 .page {
-    /* scroll-snap-align: start; */
+    scroll-snap-align: start;
+
     padding-top: 5vh;
     margin: 0 10vw;
 
@@ -82,14 +64,26 @@ button {
         grid-row: 2 / 3;
     }
 
-    > button {
-        font-size: clamp(22px, 3rem, 5vw);
-        align-self: center;
-
-        padding: 0;
-        background: none;
+    #landing-page-buttons {
+        height: fit-content;
+        display: flex;
+        width: 100%;
+        gap: 2vw;
         grid-column: 2 / 3;
-        width: 30%;
+        > button {
+            font-size: clamp(22px, 3rem, 5vw);
+            align-self: center;
+
+            padding: 0;
+            background: none;
+            width: 40%;
+        }
+        #github-logo {
+            width: 40%;
+            > * {
+                width: clamp(22px, 3rem, 5vw);
+            }
+        }
     }
 
     @media (max-width: 600px) {
@@ -106,9 +100,19 @@ button {
         > h3 {
             grid-row: 3 / 4;
         }
-        > button {
+        #landing-page-buttons {
             grid-column: unset;
-            width: 50%;
+            justify-content: center;
+            > button {
+                font-size: clamp(22px, 5rem, 10vw);
+                width: 30%;
+            }
+            #github-logo {
+                width: 30%;
+                > * {
+                    width: clamp(22px, 5rem, 10vw);
+                }
+            }
         }
     }
 }
@@ -145,11 +149,10 @@ button {
     border-radius: 15px;
 
     padding: 10%;
-    background-color: rgb(53, 42, 84, 0.5);
+    background-color: var(--card-bg-color);
 
     > svg {
         width: clamp(120px, 20vw, 200px);
-        /* animation: rotation 0.3s 1 linear; */
         grid-row: 1 /4;
         align-self: center;
         animation: glow 2s infinite linear, rotation 0.3s 1 linear;
@@ -254,7 +257,7 @@ button {
     border-radius: 15px;
 
     padding: 3% 10%;
-    background-color: rgba(53, 42, 84, 0.258);
+    background-color: var(--card-bg-color);
 }
 
 .resume-grid {
@@ -264,7 +267,7 @@ button {
     margin-bottom: 5vh;
 
     padding: 3% 10%;
-    background-color: rgba(53, 42, 84, 0.258);
+    background-color: var(--card-bg-color);
     > div {
         text-align: justify;
         margin-bottom: 10vh;
