@@ -10,8 +10,19 @@
     background-attachment: local;
     color: white;
 
-    /* --card-bg-color: rgb(53, 42, 84, 0.5); */
-    --card-bg-color: rgba(53, 42, 84, 0.258);
+    --card-bg-color: rgba(148, 148, 148, 0.308);
+    /* --card-bg-color: rgb(194, 128, 13); */
+    --text-color: black;
+}
+
+#accessibility {
+    display: flex;
+    flex-direction: column;
+    > ul {
+        list-style-type: none;
+    }
+    position: absolute;
+    right: 0;
 }
 
 button {
@@ -52,6 +63,7 @@ button {
 
     > h1 {
         align-self: flex-end;
+        text-align: center;
         font-size: clamp(48px, 7rem, 10vw);
     }
 
@@ -141,6 +153,7 @@ button {
 }
 
 .stack-item-card {
+    color: white;
     height: 30vh;
 
     display: grid;
@@ -169,7 +182,8 @@ button {
     #learn-more {
         margin-top: auto;
         grid-column: 2;
-        color: #cdcfff;
+        /* color: #cdcfff; */
+        color: var(--text-color);
     }
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
@@ -208,7 +222,6 @@ button {
 }
 
 #focused-item {
-    /* filter: drop-shadow(0 0 15px antiquewhite); */
     > svg {
         animation: glow2 2s infinite linear;
     }
@@ -251,9 +264,14 @@ button {
     }
 }
 
+.about-me > h1 {
+    /* color: var(--text-color); */
+    mix-blend-mode: difference;
+}
+
 #about-me-paragraph {
     text-align: justify;
-    color: white;
+    color: var(--text-color);
     box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
     border-radius: 15px;
 
@@ -261,7 +279,14 @@ button {
     background-color: var(--card-bg-color);
 }
 
+.resume {
+    > h1 {
+        mix-blend-mode: difference;
+    }
+}
+
 .resume-grid {
+    color: var(--text-color);
     /* background: linear-gradient(#ffda55, #ffda55) no-repeat left/20px 100%; */
     box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
     border-radius: 15px;

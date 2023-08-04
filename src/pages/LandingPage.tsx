@@ -5,12 +5,11 @@ export default function LandingPage() {
         <div className="page landing-page">
             <div className="landing-page-grid">
                 <h1>
-                    Anton Joddah <br />
+                    Anton J <br />
                 </h1>
                 <h2>Front End Portfolio</h2>
 
                 <div id="landing-page-buttons">
-                    {" "}
                     <button aria-label="contact">✉️</button>
                     <button id="github-logo" aria-label="github">
                         {<GithubLogo />}
