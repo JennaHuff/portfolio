@@ -17,11 +17,10 @@
 
 a {
     font-weight: 500;
-    /* color: #646cff; */
     text-decoration: inherit;
 }
 a:hover {
-    /* color: #535bf2; */
+    color: #535bf2;
 }
 
 body {
@@ -31,7 +30,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-color: #ff8c61;
+    /* background-color: #ff8c61; */
     /* overflow-y: hidden;
     overflow-x: hidden; */
 }
