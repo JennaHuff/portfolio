@@ -28,6 +28,12 @@
     background-size: cover;
     background-attachment: local;
     color: white;
+
+    #accessibility {
+        span {
+            background-color: black;
+        }
+    }
 }
 
 .plain {
@@ -46,6 +52,11 @@
     .stack-item-card {
         color: var(--text-color);
     }
+    #accessibility {
+        span {
+            background-color: antiquewhite;
+        }
+    }
 }
 
 .animations-off {
@@ -58,13 +69,21 @@
 }
 
 #accessibility {
+    position: absolute;
+    top: 5vh;
+    right: 1vw;
+
     display: flex;
     flex-direction: column;
-    > ul {
-        list-style-type: none;
+    text-align: right;
+    align-items: flex-end;
+
+    font-weight: bold;
+    font-size: clamp(16px, 1.5rem, 5vw);
+
+    span {
+        border-radius: 5px;
     }
-    position: absolute;
-    right: 0;
 }
 
 button {

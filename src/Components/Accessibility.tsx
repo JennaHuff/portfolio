@@ -13,19 +13,21 @@ export function Accessibility({
 }) {
     return (
         <div id="accessibility">
-            accessibility
-            <ul>
-                <li>
-                    background mode
-                    <button onClick={() => toggleTheme()}>{theme}</button>
-                </li>
-                <li>
-                    animations
-                    <button onClick={() => toggleAnimations()}>
-                        {animations === "animations-on" ? "on" : "off"}
-                    </button>
-                </li>
-            </ul>
+            <label>
+                <span>plain background</span>
+            </label>
+            <ReactSwitch
+                onChange={() => toggleTheme()}
+                checked={theme === "plain"}
+            />
+            <label>
+                <span>animations</span>
+            </label>
+            <ReactSwitch
+                id={"accessibility-switch"}
+                onChange={() => toggleAnimations()}
+                checked={animations === "animations-on"}
+            />
         </div>
     );
 }
