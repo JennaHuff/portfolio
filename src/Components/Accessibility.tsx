@@ -1,22 +1,28 @@
-import { useState } from "react";
+import ReactSwitch from "react-switch";
 
-export function Accessibility() {
-    const [backgroundMode, setBackgroundMode] = useState(true);
-    const [animations, setAnimations] = useState(true);
+export function Accessibility({
+    theme,
+    toggleTheme,
+    animations,
+    toggleAnimations,
+}: {
+    theme: "fancy" | "plain";
+    toggleTheme: () => void;
+    animations: "animations-on" | "animations-off";
+    toggleAnimations: () => void;
+}) {
     return (
         <div id="accessibility">
             accessibility
             <ul>
                 <li>
                     background mode
-                    <button onClick={() => setBackgroundMode(!backgroundMode)}>
-                        {backgroundMode ? "fancy" : "plain"}
-                    </button>
+                    <button onClick={() => toggleTheme()}>{theme}</button>
                 </li>
                 <li>
                     animations
-                    <button onClick={() => setAnimations(!animations)}>
-                        {animations ? "on" : "off"}
+                    <button onClick={() => toggleAnimations()}>
+                        {animations === "animations-on" ? "on" : "off"}
                     </button>
                 </li>
             </ul>

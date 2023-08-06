@@ -1,18 +1,60 @@
 #root {
+    /* scroll-snap-type: y proximity;
+
+    width: 100vw;
+    height: 100dvh;
+    overflow-y: scroll;
+
+    --card-bg-color: rgba(148, 148, 148, 0.308);
+    --box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
+    --text-color: black; */
+}
+
+#theme-wrapper {
     scroll-snap-type: y proximity;
 
     width: 100vw;
     height: 100dvh;
     overflow-y: scroll;
 
+    --card-bg-color: rgba(148, 148, 148, 0.308);
+    --box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
+    --text-color: black;
+}
+
+.fancy {
+    height: 100%;
     background-image: url("/src/assets/Background Waves.svg");
     background-size: cover;
     background-attachment: local;
     color: white;
+}
 
-    --card-bg-color: rgba(148, 148, 148, 0.308);
-    /* --card-bg-color: rgb(194, 128, 13); */
-    --text-color: black;
+.plain {
+    background-color: antiquewhite;
+    color: black;
+
+    .landing-page-grid #landing-page-buttons > button {
+        background: black;
+    }
+    .card {
+        --text-color: black;
+        --card-bg-color: none;
+        --box-shadow: none;
+        border: 3px solid black;
+    }
+    .stack-item-card {
+        color: var(--text-color);
+    }
+}
+
+.animations-off {
+    & #focused-item > svg {
+        animation: none;
+    }
+    & .stack-item-card > svg {
+        animation: none;
+    }
 }
 
 #accessibility {
@@ -39,6 +81,12 @@ button {
         letter-spacing: -1.7px;
         margin-top: 0;
     }
+}
+
+.card {
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-bg-color);
 }
 
 .landing-page {
@@ -154,22 +202,23 @@ button {
 
 .stack-item-card {
     color: white;
+
     height: 30vh;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
 
-    box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
     border-radius: 15px;
 
     padding: 10%;
-    background-color: var(--card-bg-color);
 
     > svg {
         width: clamp(120px, 20vw, 200px);
         grid-row: 1 /4;
         align-self: center;
-        animation: glow 2s infinite linear, rotation 0.3s 1 linear;
+        @media (prefers-reduced-motion: no-preference) {
+            animation: glow 2s infinite linear, rotation 0.3s 1 linear;
+        }
     }
     > h1 {
         font-size: max(22px, min(calc(2rem + 0.5vw), 100vw));
@@ -223,7 +272,9 @@ button {
 
 #focused-item {
     > svg {
-        animation: glow2 2s infinite linear;
+        @media (prefers-reduced-motion: no-preference) {
+            animation: glow2 2s infinite linear;
+        }
     }
 }
 
@@ -265,18 +316,14 @@ button {
 }
 
 .about-me > h1 {
-    /* color: var(--text-color); */
     mix-blend-mode: difference;
 }
 
 #about-me-paragraph {
     text-align: justify;
-    color: var(--text-color);
-    box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
     border-radius: 15px;
 
     padding: 3% 10%;
-    background-color: var(--card-bg-color);
 }
 
 .resume {
@@ -286,14 +333,10 @@ button {
 }
 
 .resume-grid {
-    color: var(--text-color);
-    /* background: linear-gradient(#ffda55, #ffda55) no-repeat left/20px 100%; */
-    box-shadow: 0 4px 8px 0 rgb(53, 42, 84, 0.5);
     border-radius: 15px;
     margin-bottom: 5vh;
 
     padding: 3% 10%;
-    background-color: var(--card-bg-color);
     > div {
         text-align: justify;
         margin-bottom: 10vh;

@@ -3,7 +3,7 @@ import stackItems from "../stackItems";
 
 function StackItemCard(item: IStackItem) {
     return (
-        <div className="stack-item-card">
+        <div className="stack-item-card card">
             <>{item.icon}</>
             <h1>{item.name}</h1>
             <p>{item.description}</p>

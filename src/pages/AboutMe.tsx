@@ -3,7 +3,7 @@ export function AboutMe() {
         <div className="page about-me">
             <h1>About me</h1>
             <div>
-                <p id="about-me-paragraph">
+                <p id="about-me-paragraph" className="card">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Ipsa eligendi officiis quaerat quidem quas excepturi ab
                     assumenda ea quos incidunt ipsam cum quasi fugiat, provident
