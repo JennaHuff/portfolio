@@ -11,8 +11,11 @@ export default function LandingPage() {
 
                 <div id="landing-page-buttons">
                     <button aria-label="contact">✉️</button>
+
                     <button id="github-logo" aria-label="github">
-                        {<GithubLogo />}
+                        <a href="https://github.com/JennaHuff">
+                            {<GithubLogo />}
+                        </a>
                     </button>
                 </div>
                 <h3>📍 Bordeaux, France</h3>

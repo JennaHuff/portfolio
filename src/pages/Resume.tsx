@@ -2,7 +2,7 @@ export function Resume() {
     return (
         <div className="page resume">
             <h1>Resume</h1>
-            <div className={"resume-grid card"}>
+            <div className={"resume-grid"}>
                 <div>
                     <h4>2022</h4>
                     <p>
