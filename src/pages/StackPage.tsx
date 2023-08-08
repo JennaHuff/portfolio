@@ -6,6 +6,7 @@ function StackItemCard(item: IStackItem) {
         <div className="stack-item-card card">
             <>{item.icon}</>
             <h1>{item.name}</h1>
+            {item.catchphrase && <h3>{item.catchphrase}</h3>}
             <p>{item.description}</p>
             <a href={item.docsLink} target="_blank" id="learn-more">
                 Learn more

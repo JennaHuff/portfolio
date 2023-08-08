@@ -9,26 +9,32 @@ const stackItems: IStackItem[] = [
     {
         name: "React",
         icon: <ReactLogo />,
+        catchphrase: "Avoid repetitive code",
         description:
-            "A powerful modern UI library Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "React is an open-source front-end JavaScript library for building user interfaces based on reusable components (bricks, if you will). React can be used to develop single-page (SPA), mobile, or server-rendered (SSR) applications.",
         docsLink: "https://react.dev/",
     },
     {
         name: "Typescript",
         icon: <TypescriptLogo />,
-        description: "Adds types to javascript",
+        catchphrase: "Catch errors early in your editor",
+        description:
+            "TypeScript is an open-source high-level programming language that adds static typing to JavaScript. It is designed for the development of large applications and transpiles to JavaScript.",
         docsLink: "https://www.typescriptlang.org/",
     },
     {
         name: "ViteJS",
         icon: <ViteLogo />,
-        description: "Fast react app bundler",
+        catchphrase: "Bundle React apps fast",
+        description:
+            "Vite  is a local development server boasting Hot Module Replacement, a pre-configured RollupJs bundler and out-of-the-box support for Typescript, JSX and server-side rendering (SSR).",
         docsLink: "https://vitejs.dev/",
     },
     {
         name: "Visual Studio Code",
         icon: <VscLogo />,
-        description: "An ide ++ plugins",
+        description:
+            "Visual Studio Code is the most popular code editor. It offers tens of thousands of extensions, and features such as syntax highlighting, automatic formatting and refactoring.",
         docsLink: "https://code.visualstudio.com/",
     },
     {
